@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+    <link rel="stylesheet" href="css/loginstyle.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+<body class='main'>
+
+  <div class="form">
+    <div class='modal'>
+      
+      <h1>Welcome Back!</h1>
+      <form class="login">
+        <div class="field-wrap">
+        <input placeholder='Email Address *' name='email' type="email"required autocomplete="off"/>
+      </div>
+      
+      <div class="field-wrap">
+        <input placeholder='Password *' name='password' type="password"required autocomplete="off"/>
+      </div>
+      <p class='error' style="color:red;font-weight:bold"></p>
+
+      <button class="button button-block"/>Log In</button>
+      
+      </form>
+      &nbsp;&nbsp;&nbsp;
+      <div align='center'>Not Registered..?&nbsp;<a class='switch'> Register Now</a></div>
+    
+    </div>
+
+    <div class='modal'>
+         
+      <h1>Register for Free</h1>
+      
+      <form class="register">
+      
+      <div class="top-row">
+        <div class="field-wrap">          
+          <input placeholder='Name *' name='name' type="text" required autocomplete="off" />
+        </div>
+    
+        <div class="field-wrap">
+          <input placeholder='Age *' name='age' type="number" min='1'required autocomplete="off"/>
+        </div>
+      </div>
+
+      <div class="top-row">
+        <div class="field-wrap">
+          <select  name='Respiratory' class="Respiratory" required>
+            <option value ="" disabled selected hidden>Pre-Existing Respiratory Condition(Yes/No)</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+        <div class="field-wrap">    
+          <select name='Occupation' class = "occupationList" required>
+            <option value = "" disabled selected hidden>Please Select your Occupation</option>
+            <option value = "Healthcare Workers">Healthcare Workers</option>
+            <option value = "Public Services Staf">Public Services Staf</option>
+            <option value = "Manufacturing">Manufacturing</option>
+            <option value = "IT Professiona">IT Professiona</option>
+            <option value = "Student">Student</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="top-row">
+        <div class="field-wrap">
+          <select  name='Diebetic' class="Diebetic" required>
+            <option value ="" disabled selected hidden>Pre-Existing Diebetic Condition(Yes/No)</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+        <div class="field-wrap">
+          <select  name='covidPositive' class="covidPositive" required>
+            <option value ="" disabled selected hidden>Covid Positive(Yes/No)</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+      </div>
+      <div class="top-row">
+        <div class="field-wrap">
+          <select  name='Recovered' class="Recovered" required>
+            <option value ="" disabled selected hidden>Already Recovered from Covid-19(Yes/No)</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+        <div class="field-wrap">
+          <select  name='Insurance' class="Insurance" required>
+            <option value ="" disabled selected hidden>Health Insurance(Yes/No)</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+      </div>
+      <div class="field-wrap">   
+        <input placeholder='Phone No. *' name='phone' type="tel" maxlength="10" required autocomplete="off"/>
+      </div>
+      <div class="field-wrap">   
+        <input placeholder='Email Address *' name='email' type="email"required autocomplete="off"/>
+      </div>
+      
+      <div class="field-wrap">
+        <input placeholder='Enter Password *' name='password' type="password"required autocomplete="off"/>
+      </div>
+
+      <p class='error' style="color:red;font-weight:bold"></p>
+      
+      <button type="submit" class="button button-block"/>Register</button>
+      
+      </form>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <div align='center'>Already Registered..?&nbsp;<a class='switch'> Login Now</a></div>
+
+    
+    </div>
+  
+  </div> <!-- /form -->
+
+
+<div class='home'>
+  <h2 align='center'>Welcome Back</h2>
+  <div class="column">
+    <div class="card">
+      <span>Personal Details</span>
+      <p><span>Name:</span><p class='name'></p>&nbsp;&nbsp;&nbsp;<span>Email:</span><p class='email'></p></p>
+      <p><span>Age:</span><p class='age'></p>&nbsp;&nbsp;&nbsp;<span>Occupation:</span><p class='occupation'></p></p>
+      <p><span>Pre-Existing Respiratory Condition(Yes/No):</span><p class='respiratory'></p></p>
+      <p><span>Pre-Existing Diebetic Condition(Yes/No):</span><p class='diebetic'></p></p>
+      <p><span>Covid Positive(Yes/No):</span><p class='covid-positive'></p></p>
+      <p><span>Already Recovered from Covid-19(Yes/No):</span><p class='covid-recovered'></p></p>
+      <p><span>Health Insurance(Yes/No):</span><p class='insurance'></p></p>
+      <p><span>Token Status:</span><p class='token'></p></p>
+    </div>
+</div><br>
+  <div class="u-center-text u-margin-top-huge">
+    <button class="btn btn--green delete-request">Delete Request</button>
+    <button class="btn btn--green signout">Logout</button>
+    <button class="btn btn--green mancheck">check</button>
+  </div>
+</div>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/8.2.4/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  
+  <script src="/__/firebase/8.2.4/firebase-auth.js"></script>
+  <script src="/__/firebase/8.2.4/firebase-database.js"></script>
+  <script src="/__/firebase/8.2.4/firebase-function.js"></script>
+  <!-- Initialize Firebase -->
+  <script src="/__/firebase/init.js"></script>
+  <script src='js/loginform.js'></script>
+</body>
+</html>
